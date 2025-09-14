@@ -5,3 +5,8 @@
     max-width: 500px;
     margin: auto;
 }
+
+.customGrids {
+    display: block;
+    margin: 10px auto;
+}
