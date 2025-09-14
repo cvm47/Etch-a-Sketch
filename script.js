@@ -7,6 +7,7 @@ customGrids.addEventListener('click', () => {
     totalGrids = +prompt('enter number of grid')
     
     let container = document.querySelector('.container')
+    container.innerHTML = ''
     let onlySixteenGrids, onlyOneGrid;
     for (let i = 0; i < totalGrids; i++) {
         onlySixteenGrids = document.createElement('div')
