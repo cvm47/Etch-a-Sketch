@@ -24,6 +24,7 @@ function createGrid(size) {
         gridContainer.appendChild(column)
     }
 }
+createGrid(16)
 
 function applyHoverEffect(color) {
     let cells = document.querySelectorAll('.cellBgColor')
@@ -33,6 +34,7 @@ function applyHoverEffect(color) {
         })
     });
 }
+applyHoverEffect('#333')
 
 function applyRandomColorMode () {
     function getRandomRGB() {
@@ -52,3 +54,4 @@ function applyRandomColorMode () {
         })
     })
 }
+applyRandomColorMode()
