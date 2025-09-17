@@ -7,7 +7,7 @@ gridSizeBtn.addEventListener('click', () => {
     gridContainer.innerHTML = ''
     createGrid (totalGrids)
     applyHoverEffect('pink')
-    enableRandomColorMode()
+    applyRandomColorMode()
 })
 
 function createGrid(size) {
@@ -34,7 +34,7 @@ function applyHoverEffect(color) {
     });
 }
 
-function enableRandomColorMode () {
+function applyRandomColorMode () {
     function getRandomRGB() {
         let red = Math.floor(Math.random() * (255 + 1))
         let green = Math.floor(Math.random() * (255 + 1))
