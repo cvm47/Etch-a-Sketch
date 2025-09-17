@@ -13,12 +13,7 @@ gridSizeBtn.addEventListener('click', () => {
     
 
     // step 2 : hover
-    let cells = document.querySelectorAll('.cellBgColor')
-    cells.forEach((cell) => {
-        cell.addEventListener('mouseover',() => {
-            cell.style.background = 'pink'
-        })
-    })
+    applyHoverEffect('pink')
 
     // random rgb
     function getRandomRGB() {
@@ -52,4 +47,13 @@ function createGrid(size) {
         }
         gridContainer.appendChild(column)
     }
+}
+
+function applyHoverEffect(color) {
+    let cells = document.querySelectorAll('.cellBgColor')
+    cells.forEach((cell) => {
+        cell.addEventListener('mouseenter', () => {
+            cell.style.background = color
+        })
+    });
 }
