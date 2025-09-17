@@ -1,23 +1,13 @@
-// step 1
-// let container = document.querySelector('.container')
-// step 3 :customGrids
 let gridSizeBtn = document.querySelector('.grid-size-btn')
 let gridContainer = document.querySelector('.grid-container')
 let totalGrids;
+
 gridSizeBtn.addEventListener('click', () => {
     totalGrids = +prompt('enter number of grid')
-    // clearing container at every click
     gridContainer.innerHTML = ''
-
     createGrid (totalGrids)
-    
-
-    // step 2 : hover
     applyHoverEffect('pink')
-
-    // random rgb
     enableRandomColorMode()
-    
 })
 
 function createGrid(size) {
@@ -45,7 +35,6 @@ function applyHoverEffect(color) {
 }
 
 function enableRandomColorMode () {
-    // random rgb
     function getRandomRGB() {
         let red = Math.floor(Math.random() * (255 + 1))
         let green = Math.floor(Math.random() * (255 + 1))
