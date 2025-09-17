@@ -16,6 +16,11 @@
     margin: 10px auto;
 }
 
+.eraser {
+    display: block;
+    margin: 10px auto;
+}
+
 .column {
     flex: 1;
     display: flex;

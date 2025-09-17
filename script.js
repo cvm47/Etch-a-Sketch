@@ -6,6 +6,7 @@ let gridContainer = document.querySelector('.grid-container')
 createGrid(16)
 applyHoverEffect('#333')
 applyRandomColorMode()
+erase()
 
 // Event: change grid size
 gridSizeBtn.addEventListener('click', () => {
@@ -66,4 +67,16 @@ function applyRandomColorMode () {
 
 function clearGrid() {
     return gridContainer.innerHTML = ''
+}
+
+function erase() {
+    let eraser = document.querySelector('.eraser')
+    eraser.addEventListener('click', () => {
+        let cells = document.querySelectorAll('.cellBgColor')
+        cells.forEach((cell) => {
+            cell.addEventListener('mouseenter', () => {
+                cell.style.background = 'white'
+            })
+        })
+    })
 }
