@@ -21,6 +21,11 @@
     margin: 10px auto;
 }
 
+.clearAll {
+    display: block;
+    margin: 10px auto;
+}
+
 .column {
     flex: 1;
     display: flex;
