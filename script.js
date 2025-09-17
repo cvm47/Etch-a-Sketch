@@ -1,6 +1,13 @@
+// DOM elements
 let gridSizeBtn = document.querySelector('.grid-size-btn')
 let gridContainer = document.querySelector('.grid-container')
 
+// Default grid on page load
+createGrid(16)
+applyHoverEffect('#333')
+applyRandomColorMode()
+
+// Event: change grid size
 gridSizeBtn.addEventListener('click', () => {
     let size = +prompt('enter number of grid')
     if (size > 0 && size < 101) {
@@ -14,6 +21,7 @@ gridSizeBtn.addEventListener('click', () => {
     }
 })
 
+// FUNCTIONS
 function createGrid(size) {
     let column,cell;
     for (let i = 0; i < size; i++) {
@@ -27,7 +35,6 @@ function createGrid(size) {
         gridContainer.appendChild(column)
     }
 }
-createGrid(16)
 
 function applyHoverEffect(color) {
     let cells = document.querySelectorAll('.cellBgColor')
@@ -37,7 +44,6 @@ function applyHoverEffect(color) {
         })
     });
 }
-applyHoverEffect('#333')
 
 function applyRandomColorMode () {
     function getRandomRGB() {
@@ -57,7 +63,6 @@ function applyRandomColorMode () {
         })
     })
 }
-applyRandomColorMode()
 
 function clearGrid() {
     return gridContainer.innerHTML = ''
