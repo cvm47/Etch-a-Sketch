@@ -1,13 +1,17 @@
 let gridSizeBtn = document.querySelector('.grid-size-btn')
 let gridContainer = document.querySelector('.grid-container')
-let totalGrids;
 
 gridSizeBtn.addEventListener('click', () => {
-    totalGrids = +prompt('enter number of grid')
-    clearGrid()
-    createGrid (totalGrids)
-    applyHoverEffect('pink')
-    applyRandomColorMode()
+    let size = +prompt('enter number of grid')
+    if (size > 0 && size < 101) {
+        clearGrid()
+        createGrid (size)
+        applyHoverEffect('pink')
+        applyRandomColorMode()
+    }
+    else {
+        alert('grid size should be in between 1 and 100')
+    }
 })
 
 function createGrid(size) {
