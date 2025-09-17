@@ -6,21 +6,9 @@
     margin: auto;
 }
 
-.grid-size-btn {
-    display: block;
-    margin: 10px auto;
-}
-
-.random-color-btn {
-    display: block;
-    margin: 10px auto;
-}
-
-.eraser {
-    display: block;
-    margin: 10px auto;
-}
-
+.grid-size-btn,
+.random-color-btn, 
+.eraser, 
 .clearAll {
     display: block;
     margin: 10px auto;
@@ -34,5 +22,6 @@
 
 .cellBgColor {
     flex: 1;
-    border: 1px solid #f0e3e3;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
 }
