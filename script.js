@@ -9,18 +9,8 @@ gridSizeBtn.addEventListener('click', () => {
     // clearing container at every click
     gridContainer.innerHTML = ''
 
-    let row, cell;
-    for (let i = 0; i < totalGrids; i++) {
-        row = document.createElement('div')
-        row.style.cssText = "flex: 1; display: flex; flex-direction: column"
-        for (let j = 0; j < totalGrids; j++) {
-            cell = document.createElement('div')
-            cell.classList.add('cellBgColor')
-            cell.style.cssText = "border: 0.5px solid #e3e3e3ff; border-radius: 1px; flex: 1"
-            row.appendChild(cell)
-        }
-        gridContainer.appendChild(row)
-    }
+    createGrid (totalGrids)
+    
 
     // step 2 : hover
     let cells = document.querySelectorAll('.cellBgColor')
@@ -48,3 +38,18 @@ gridSizeBtn.addEventListener('click', () => {
     })
     
 })
+
+function createGrid(size) {
+    let column,cell;
+    for (let i = 0; i < size; i++) {
+        column = document.createElement('div')
+        column.style.cssText = "flex: 1; display: flex; flex-direction: column;"
+        for (let j = 0; j < size; j++) {
+            cell = document.createElement('div')
+            cell.classList.add('cellBgColor')
+            cell.style.cssText = 'flex: 1; border: 1px solid #e3e3e3ff'
+            column.appendChild(cell)
+        }
+        gridContainer.appendChild(column)
+    }
+}
