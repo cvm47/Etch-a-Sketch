@@ -16,21 +16,7 @@ gridSizeBtn.addEventListener('click', () => {
     applyHoverEffect('pink')
 
     // random rgb
-    function getRandomRGB() {
-        let red = Math.floor(Math.random() * (255 + 1))
-        let green = Math.floor(Math.random() * (255 + 1))
-        let blue = Math.floor(Math.random() * (255 + 1))
-        return `rgb(${red}, ${green}, ${blue})`
-    }
-
-    let randomColorBtn = document.querySelector('.random-color-btn')
-    randomColorBtn.addEventListener('click',() => {
-        cells.forEach((cell) => {
-            cell.addEventListener('mouseover', () => {
-                cell.style.background = getRandomRGB()
-            })
-        })
-    })
+    enableRandomColorMode()
     
 })
 
@@ -56,4 +42,24 @@ function applyHoverEffect(color) {
             cell.style.background = color
         })
     });
+}
+
+function enableRandomColorMode () {
+    // random rgb
+    function getRandomRGB() {
+        let red = Math.floor(Math.random() * (255 + 1))
+        let green = Math.floor(Math.random() * (255 + 1))
+        let blue = Math.floor(Math.random() * (255 + 1))
+        return `rgb(${red}, ${green}, ${blue})`
+    }
+
+    let randomColorBtn = document.querySelector('.random-color-btn')
+    randomColorBtn.addEventListener('click', () => {
+        let cells = document.querySelectorAll('.cellBgColor')
+        cells.forEach((cell) => {
+            cell.addEventListener('mouseenter', () => {
+                cell.style.background = getRandomRGB()
+            })
+        })
+    })
 }
