@@ -4,7 +4,7 @@ let totalGrids;
 
 gridSizeBtn.addEventListener('click', () => {
     totalGrids = +prompt('enter number of grid')
-    gridContainer.innerHTML = ''
+    clearGrid()
     createGrid (totalGrids)
     applyHoverEffect('pink')
     applyRandomColorMode()
@@ -54,3 +54,7 @@ function applyRandomColorMode () {
     })
 }
 applyRandomColorMode()
+
+function clearGrid() {
+    return gridContainer.innerHTML = ''
+}
