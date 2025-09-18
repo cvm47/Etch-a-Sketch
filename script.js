@@ -15,7 +15,7 @@ gridSizeBtn.addEventListener('click', () => {
     if (size > 0 && size < 101) {
         clearGrid()
         createGrid (size)
-        applyHoverEffect('pink')
+        applyHoverEffect('#333')
         applyRandomColorMode()
     }
     else {
