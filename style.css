@@ -10,15 +10,14 @@
 .random-color-btn, 
 .eraser, 
 .clearAll {
-    /* display: block;
-    margin: 10px auto; */
     flex: 1;
-    border: 1px solid white;
-    border-radius: 5px;
-    height: 40px;
-    font-size: 16px;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
+    border: 2px solid #fff;
+    border-radius: 6px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family:monospace;
+    color: #ffffff;
     background-color: #333;
 }
 
@@ -30,23 +29,24 @@
 
 .cellBgColor {
     flex: 1;
-    border: 1px solid #e2e2e2;
-    border-radius: 2px;
+    border: 1px solid #cdcccd;
+    border-radius: 1px;
+    background-color: #faf7fc;
 }
 
+/* Buttons Wrapper */
 .buttons {
     width: 600px;
-    margin: 35px auto;
-    /* border: 1px solid red; */
-    display:flex;
-    gap: 10px;
+    margin: 30px auto;
+    display: flex;
+    gap: 12px;
     height: 30px;
 }
 
 h1 {
     text-align: center;
-    font-family: 'Bitcount Grid Double';
+    font-family: 'Bitcount Grid Double', cursive;
     font-size: 72px;
     color: #333;
-    margin: 20px 0;
+    margin: 25px 0;
 }
