@@ -22,6 +22,16 @@
     background-color: #333;
 }
 
+/* Hover invert effect */
+.grid-size-btn:hover,
+.random-color-btn:hover, 
+.eraser:hover, 
+.clearAll:hover {
+    background-color: #fff;
+    color: #333;
+    border-color: #333;
+}
+
 .column {
     flex: 1;
     display: flex;
