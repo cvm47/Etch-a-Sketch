@@ -1,8 +1,8 @@
 .grid-container {
     border: 2px solid #333;
     display: flex;
-    height: 500px;
-    max-width: 500px;
+    height: 600px;
+    max-width: 600px;
     margin: auto;
 }
 
@@ -10,8 +10,16 @@
 .random-color-btn, 
 .eraser, 
 .clearAll {
-    display: block;
-    margin: 10px auto;
+    /* display: block;
+    margin: 10px auto; */
+    flex: 1;
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    background-color: #333;
 }
 
 .column {
@@ -22,6 +30,23 @@
 
 .cellBgColor {
     flex: 1;
-    border: 1px solid #d9d9d9;
+    border: 1px solid #e2e2e2;
     border-radius: 2px;
+}
+
+.buttons {
+    width: 600px;
+    margin: 35px auto;
+    /* border: 1px solid red; */
+    display:flex;
+    gap: 10px;
+    height: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Bitcount Grid Double';
+    font-size: 72px;
+    color: #333;
+    margin: 20px 0;
 }
