@@ -1,5 +1,6 @@
 .grid-container {
-    border: 2px solid #333;
+    border: 3px solid #333;
+    border-radius: 5px;
     display: flex;
     height: 600px;
     max-width: 600px;
@@ -29,9 +30,9 @@
 
 .cellBgColor {
     flex: 1;
-    border: 1px solid #cdcccd;
+    border: 1px solid #e0e0e0;
     border-radius: 1px;
-    background-color: #faf7fc;
+    background-color: #ffffff;
 }
 
 /* Buttons Wrapper */
